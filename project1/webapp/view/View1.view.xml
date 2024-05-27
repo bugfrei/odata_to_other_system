@@ -1,0 +1,30 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+        <!-- Tabelle mit Binding zum Unnamed Model und den Spalten UserName, FirstName und LastName -->
+        <Table id="table" items="{/People}" noDataText="{i18n>tableNoDataText}">
+            <columns>
+                <Column>
+                    <Text text="UserName" />
+                </Column>
+                <Column>
+                    <Text text="FirstName" />
+                </Column>
+                <Column>
+                    <Text text="LastName" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{UserName}" />
+                        <Text text="{FirstName}" />
+                        <Text text="{LastName}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
